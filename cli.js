@@ -26,7 +26,6 @@ if (args.s && lat > 0) {
     lat *= -1;
 }
 
-
 if (args.w && lon > 0) {
     lon *= -1;
 }
@@ -41,7 +40,6 @@ if (args.j){
     console.log(data);
     process.exit(0);
 }
-
 
 if (data.daily.precipitation_hours[day || 1] > 0) {
     process.stdout.write("You might need your galoshes ");
