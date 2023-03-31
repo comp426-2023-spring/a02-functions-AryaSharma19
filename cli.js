@@ -30,7 +30,9 @@ if (args.w && lon > 0) {
     lon *= -1;
 }
 
-const have_to_add = 1;
+
+lon = Math.round(lon * 100) / 100;
+lat = Math.round(lat * 100) / 100;
 
 const days_wanted = 7;
 
@@ -39,6 +41,10 @@ const response = await fetch(url);
 const data = await response.json();
 
 if (args.j){
+    
+    data.latitude = Math.round(data.latitude * 100) / 100;
+    data.longitude = Math.round(data.longitude * 100) / 100;
+    
     console.log(data);
     process.exit(0);
 }
