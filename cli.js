@@ -30,6 +30,8 @@ if (args.w && lon > 0) {
     lon *= -1;
 }
 
+const have_to_add = 1;
+
 const days_wanted = 7;
 
 const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat +'&longitude=' + lon +'&timezone=' + timezone + '&forecast_days=' + days_wanted + '&daily=precipitation_hours';
